@@ -44,8 +44,8 @@ img {
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #ffeacc;
-  --surface-color: #fff6e9;
+  --background-color: #ffffff;
+  --surface-color: #ffffff;
 }
 
 .dark-background {
@@ -312,7 +312,7 @@ h6 {
 }
 
 .header .main-header .logo img {
-  max-height: 50px;
+  max-width: 200px;
   margin-right: 8px;
 }
 
@@ -1411,10 +1411,15 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: #000000;
+  color: #000;
+  background-color: #fefefe;
   font-size: 14px;
+  border-top: 5px solid #00000010 ;
   position: relative;
+}
+.footer *{
+  color: #000 !important;
+ 
 }
 
 .footer .footer-main {
@@ -1505,7 +1510,7 @@ h6 {
   position: absolute;
   left: 0;
   top: 0;
-  color: var(--accent-color);
+  color: #000;
   font-size: 14px;
   transition: all 0.3s ease;
 }
@@ -1579,7 +1584,7 @@ h6 {
 }
 
 .footer .footer-main .social-links .social-icons a:hover {
-  background-color: #243d26;
+ 
   color: var(--contrast-color);
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -1860,7 +1865,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   padding-top: 100px;
-  background: url(https://images.unsplash.com/photo-1711656706247-74df7592fd93?q=80&w=1020&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background: linear-gradient(to right, #fff, #18490e);
   position: relative;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -2553,6 +2558,13 @@ section,
   border-radius: 2px;
   overflow: hidden;
   transition: all 0.4s ease;
+}
+.paranoma{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .best-sellers .product-item:hover {
@@ -12653,4 +12665,24 @@ section,
 }
 .wp-ab2 img {
   margin-top: 10px;
+}
+
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+
+  font-size: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+ 
 }
