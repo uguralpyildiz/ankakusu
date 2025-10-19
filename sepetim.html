@@ -17,7 +17,6 @@
 <meta property="og:url" content="https://ankakusugiftshop.com/">
 <meta name="twitter:card" content="summary_large_image">
 
-
 		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -198,7 +197,7 @@
 			<!-- Toplam ve buton gelecek -->
 		</div>
 	</div>
-	<script>
+	 <script>
 		const cartContainer = document.getElementById("cart-container");
 		const cartSummary = document.getElementById("cart-summary");
 		let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -209,73 +208,73 @@
 
 			if (cart.length === 0) {
 				cartContainer.innerHTML = `
-	      <div class="empty-cart text-center py-5">
-			 <p class="fs-5 mb-3"><img width="200" height="200" src="https://img.icons8.com/pulsar-gradient/200/image-not-avialable.png" alt="image-not-avialable"/></p>
-	        <p class="fs-5 mb-3">Sepetin boş</p>
-	        <a href="index.html" class="btn btn-dark">Alışverişe Devam Et</a>
-	      </div>`;
+				<div class="empty-cart text-center py-5">
+					<p class="fs-5 mb-3">
+						<img width="200" height="200" src="https://img.icons8.com/pulsar-gradient/200/image-not-avialable.png" alt="image-not-avialable"/>
+					</p>
+					<p class="fs-5 mb-3">Sepetin boş</p>
+					<a href="index.html" class="btn btn-dark">Alışverişe Devam Et</a>
+				</div>`;
 				return;
 			}
 
 			let total = 0;
-
-			// Ürün tablosu
 			const table = document.createElement("table");
 			table.className = "table align-middle";
 			table.innerHTML = `
-	    <thead class="table-light">
-	      <tr>
-	        <th>Ürün</th>
-	        <th>Ad</th>
-	        <th>Renk</th>
-	        <th>Fiyat</th>
-	        <th>Adet</th>
-	        <th>Toplam</th>
-	        <th></th>
-	      </tr>
-	    </thead>
-	    <tbody>
-	      ${cart.map((item, index) => {
+			<thead class="table-light">
+				<tr>
+					<th>Ürün</th>
+					<th>Ad</th>
+					<th>Renk</th>
+					<th>Fiyat</th>
+					<th>Adet</th>
+					<th>Toplam</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				${cart.map((item, index) => {
 				const subtotal = item.price * item.quantity;
 				total += subtotal;
 				return `
-	          <tr data-index="${index}">
-	            <td><img src="${item.img}" width="70" height="70" class="rounded"></td>
-	            <td class="fw-semibold">${item.title}</td>
-	            <td>${item.color}</td>
-	            <td>₺${item.price.toFixed(2)}</td>
-	            <td>
-	              <div class="d-flex align-items-center gap-2">
-	                <button class="btn btn-sm btn-warning minus-btn">-</button>
-	                <span >${item.quantity}</span>
-	                <button class="btn btn-sm btn-warning plus-btn">+</button>
-	              </div>
-	            </td>
-	            <td>₺${subtotal.toFixed(2)}</td>
-	            <td><button class="btn btn-sm btn-dark remove-btn">Sil</button></td>
-	          </tr>`;
+						<tr data-index="${index}">
+							<td><img src="${item.img}" width="70" height="70" class="rounded"></td>
+							<td class="fw-semibold">${item.title}</td>
+							<td>${item.color}</td>
+							<td>₺${item.price.toFixed(2)}</td>
+							<td>
+								<div class="d-flex align-items-center gap-2">
+									<button class="btn btn-sm btn-warning minus-btn">-</button>
+									<span>${item.quantity}</span>
+									<button class="btn btn-sm btn-warning plus-btn">+</button>
+								</div>
+							</td>
+							<td>₺${subtotal.toFixed(2)}</td>
+							<td><button class="btn btn-sm btn-dark remove-btn">Sil</button></td>
+						</tr>`;
 			}).join("")}
-	    </tbody>`;
+			</tbody>`;
 			cartContainer.appendChild(table);
 
-			// Sepet özeti
+			// hesaplama
 			const shipping = total > 0 ? 39.90 : 0;
 			const grandTotal = total + shipping;
 
 			cartSummary.innerHTML = `
-	    <div class="border rounded p-4 bg-light text-end">
-	      <p class="mb-1">Ara Toplam: <strong>₺${total.toFixed(2)}</strong></p>
-	      <p class="mb-1">Kargo: <strong>₺${shipping.toFixed(2)}</strong></p>
-	      <hr>
-	      <h4 class="fw-bold text-dark">Genel Toplam: ₺${grandTotal.toFixed(2)}</h4>
-	      <button class="btn btn-dark mt-3 w-100" disabled>Siparişi Tamamla</button>
-	    </div>`;
+			<div class="border rounded p-4 bg-light text-end">
+				<p class="mb-1">Ara Toplam: <strong>₺${total.toFixed(2)}</strong></p>
+				<p class="mb-1">Kargo: <strong>₺${shipping.toFixed(2)}</strong></p>
+				<hr>
+				<h4 class="fw-bold text-dark">Genel Toplam: ₺${grandTotal.toFixed(2)}</h4>
+				<button id="checkout-btn" class="btn btn-warning mt-3 w-100">Siparişi Tamamla</button>
+			</div>`;
 
 			addEventListeners();
 		}
 
 		function addEventListeners() {
-			// Sil
+			// sil
 			document.querySelectorAll(".remove-btn").forEach(btn => {
 				btn.addEventListener("click", e => {
 					const row = e.target.closest("tr");
@@ -286,7 +285,7 @@
 				});
 			});
 
-			// Artır
+			// artır
 			document.querySelectorAll(".plus-btn").forEach(btn => {
 				btn.addEventListener("click", e => {
 					const row = e.target.closest("tr");
@@ -297,7 +296,7 @@
 				});
 			});
 
-			// Azalt
+			// azalt
 			document.querySelectorAll(".minus-btn").forEach(btn => {
 				btn.addEventListener("click", e => {
 					const row = e.target.closest("tr");
@@ -311,10 +310,23 @@
 					renderCart();
 				});
 			});
+
+			// checkout yönlendirme
+			const checkoutBtn = document.getElementById("checkout-btn");
+			if (checkoutBtn) {
+				checkoutBtn.addEventListener("click", () => {
+					if (cart.length === 0) {
+						alert("Sepetinde ürün bulunmuyor!");
+						return;
+					}
+					window.location.href = "checkout.html";
+				});
+			}
 		}
 
 		renderCart();
 	</script>
+
 		
 
 			<!-- Start Footer Section -->
