@@ -198,23 +198,65 @@
 		</div>
 	</div>
 	 <script>
-		const cartContainer = document.getElementById("cart-container");
-		const cartSummary = document.getElementById("cart-summary");
-		let cart = JSON.parse(localStorage.getItem("cart")) || [];
+		/* Helper: localStorage'dan güncel sepeti al */
+		function getCart() {
+			return JSON.parse(localStorage.getItem("cart")) || [];
+		}
 
+		/* Helper: cartTotals hesapla ve localStorage'a kaydet */
+		function calculateCartTotals(cart) {
+			let subtotal = 0;
+			cart.forEach(item => subtotal += (item.price * item.quantity));
+			const shipping = subtotal >= 750 && subtotal > 0 ? 0 : (subtotal > 0 ? 39.90 : 0);
+			const total = subtotal + shipping;
+
+			localStorage.setItem("cartTotals", JSON.stringify({
+				subtotal: subtotal.toFixed(2),
+				shipping: shipping.toFixed(2),
+				total: total.toFixed(2)
+			}));
+
+			return { subtotal, shipping, total };
+		}
+
+		/* Sepet sayacı (header'daki .sepetbob / .sepetprice varsa günceller) */
+		function updateCartCountBadge() {
+			const cart = getCart();
+			let totalCount = 0; let subtotal = 0;
+			cart.forEach(item => {
+				totalCount += item.quantity;
+				subtotal += item.price * item.quantity;
+			});
+
+			const badge = document.querySelector(".sepetbob");
+			if (badge) badge.textContent = totalCount;
+
+			const priceBadge = document.querySelector(".sepetprice");
+			if (priceBadge) priceBadge.textContent = `₺${(subtotal + (subtotal >= 750 && subtotal > 0 ? 0 : (subtotal > 0 ? 39.90 : 0))).toFixed(2)}`;
+		}
+
+		/* Render fonksiyonu */
 		function renderCart() {
+			const cartContainer = document.getElementById("cart-container");
+			const cartSummary = document.getElementById("cart-summary");
+			if (!cartContainer || !cartSummary) return;
+
+			const cart = getCart();
 			cartContainer.innerHTML = "";
 			cartSummary.innerHTML = "";
 
 			if (cart.length === 0) {
 				cartContainer.innerHTML = `
-				<div class="empty-cart text-center py-5">
-					<p class="fs-5 mb-3">
-						<img width="200" height="200" src="https://img.icons8.com/pulsar-gradient/200/image-not-avialable.png" alt="image-not-avialable"/>
-					</p>
-					<p class="fs-5 mb-3">Sepetin boş</p>
-					<a href="index.html" class="btn btn-dark">Alışverişe Devam Et</a>
-				</div>`;
+	      <div class="empty-cart text-center py-5">
+	        <p class="fs-5 mb-3">
+	          <img width="200" height="200" src="https://img.icons8.com/pulsar-gradient/200/image-not-avialable.png" alt="image-not-avialable"/>
+	        </p>
+	        <p class="fs-5 mb-3">Sepetin boş</p>
+	        <a href="index.html" class="btn btn-dark">Alışverişe Devam Et</a>
+	      </div>`;
+				// update totals & badges
+				calculateCartTotals(cart);
+				updateCartCountBadge();
 				return;
 			}
 
@@ -222,85 +264,90 @@
 			const table = document.createElement("table");
 			table.className = "table align-middle";
 			table.innerHTML = `
-			<thead class="table-light">
-				<tr>
-					<th>Ürün</th>
-					<th>Ad</th>
-					<th>Renk</th>
-					<th>Fiyat</th>
-					<th>Adet</th>
-					<th>Toplam</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-				${cart.map((item, index) => {
+	    <thead class="table-light">
+	      <tr>
+	        <th>Ürün</th>
+	        <th>Ad</th>
+	        <th>Renk</th>
+	        <th>Fiyat</th>
+	        <th>Adet</th>
+	        <th>Toplam</th>
+	        <th></th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      ${cart.map((item, index) => {
 				const subtotal = item.price * item.quantity;
 				total += subtotal;
 				return `
-						<tr data-index="${index}">
-							<td><img src="${item.img}" width="70" height="70" class="rounded"></td>
-							<td class="fw-semibold">${item.title}</td>
-							<td>${item.color}</td>
-							<td>₺${item.price.toFixed(2)}</td>
-							<td>
-								<div class="d-flex align-items-center gap-2">
-									<button class="btn btn-sm btn-warning minus-btn">-</button>
-									<span>${item.quantity}</span>
-									<button class="btn btn-sm btn-warning plus-btn">+</button>
-								</div>
-							</td>
-							<td>₺${subtotal.toFixed(2)}</td>
-							<td><button class="btn btn-sm btn-dark remove-btn">Sil</button></td>
-						</tr>`;
+	        <tr data-index="${index}">
+	          <td><img src="${item.img}" width="70" height="70" class="rounded"></td>
+	          <td class="fw-semibold">${item.title}</td>
+	          <td>${item.color}</td>
+	          <td>₺${item.price.toFixed(2)}</td>
+	          <td>
+	            <div class="d-flex align-items-center gap-2">
+	              <button class="btn btn-sm btn-warning minus-btn">-</button>
+	              <span class="item-qty">${item.quantity}</span>
+	              <button class="btn btn-sm btn-warning plus-btn">+</button>
+	            </div>
+	          </td>
+	          <td>₺${subtotal.toFixed(2)}</td>
+	          <td><button class="btn btn-sm btn-dark remove-btn">Sil</button></td>
+	        </tr>`;
 			}).join("")}
-			</tbody>`;
+	    </tbody>`;
+
 			cartContainer.appendChild(table);
 
-			// hesaplama
-			const shipping = total > 0 ? 39.90 : 0;
-			const grandTotal = total + shipping;
+			// totals
+			const { subtotal, shipping, total: grandTotal } = calculateCartTotals(cart);
 
 			cartSummary.innerHTML = `
-			<div class="border rounded p-4 bg-light text-end">
-				<p class="mb-1">Ara Toplam: <strong>₺${total.toFixed(2)}</strong></p>
-				<p class="mb-1">Kargo: <strong>₺${shipping.toFixed(2)}</strong></p>
-				<hr>
-				<h4 class="fw-bold text-dark">Genel Toplam: ₺${grandTotal.toFixed(2)}</h4>
-				<button id="checkout-btn" class="btn btn-warning mt-3 w-100">Siparişi Tamamla</button>
-			</div>`;
+	    <div class="border rounded p-4 bg-light text-end">
+	      <p class="mb-1">Ara Toplam: <strong>₺${subtotal.toFixed(2)}</strong></p>
+	      <p class="mb-1">Kargo: <strong>₺${shipping.toFixed(2)}</strong></p>
+	      <hr>
+	      <h4 class="fw-bold text-dark">Genel Toplam: ₺${grandTotal.toFixed(2)}</h4>
+	      <button id="checkout-btn" class="btn btn-warning mt-3 w-100">Siparişi Tamamla</button>
+	    </div>`;
 
-			addEventListeners();
+			addEventListeners();      // eventleri bağla
+			updateCartCountBadge();   // badge güncelle
 		}
 
+		/* Event listener bağlayıcı */
 		function addEventListeners() {
-			// sil
+			// remove
 			document.querySelectorAll(".remove-btn").forEach(btn => {
-				btn.addEventListener("click", e => {
+				btn.onclick = (e) => {
 					const row = e.target.closest("tr");
-					const index = row.getAttribute("data-index");
+					const index = Number(row.getAttribute("data-index"));
+					let cart = getCart();
 					cart.splice(index, 1);
 					localStorage.setItem("cart", JSON.stringify(cart));
 					renderCart();
-				});
+				};
 			});
 
-			// artır
+			// plus
 			document.querySelectorAll(".plus-btn").forEach(btn => {
-				btn.addEventListener("click", e => {
+				btn.onclick = (e) => {
 					const row = e.target.closest("tr");
-					const index = row.getAttribute("data-index");
-					cart[index].quantity += 1;
+					const index = Number(row.getAttribute("data-index"));
+					let cart = getCart();
+					cart[index].quantity = (cart[index].quantity || 0) + 1;
 					localStorage.setItem("cart", JSON.stringify(cart));
 					renderCart();
-				});
+				};
 			});
 
-			// azalt
+			// minus
 			document.querySelectorAll(".minus-btn").forEach(btn => {
-				btn.addEventListener("click", e => {
+				btn.onclick = (e) => {
 					const row = e.target.closest("tr");
-					const index = row.getAttribute("data-index");
+					const index = Number(row.getAttribute("data-index"));
+					let cart = getCart();
 					if (cart[index].quantity > 1) {
 						cart[index].quantity -= 1;
 					} else {
@@ -308,24 +355,35 @@
 					}
 					localStorage.setItem("cart", JSON.stringify(cart));
 					renderCart();
-				});
+				};
 			});
 
-			// checkout yönlendirme
+			// checkout
 			const checkoutBtn = document.getElementById("checkout-btn");
 			if (checkoutBtn) {
-				checkoutBtn.addEventListener("click", () => {
+				checkoutBtn.onclick = () => {
+					const cart = getCart();
 					if (cart.length === 0) {
 						alert("Sepetinde ürün bulunmuyor!");
 						return;
 					}
+					// yönlendir
 					window.location.href = "checkout.html";
-				});
+				};
 			}
 		}
 
-		renderCart();
+		/* İlk render çağrısı */
+		document.addEventListener("DOMContentLoaded", () => {
+			renderCart();
+
+			// opsiyonel: başka sekmede localStorage değişirse güncelleme için
+			window.addEventListener('storage', () => {
+				renderCart();
+			});
+		});
 	</script>
+
 
 		
 

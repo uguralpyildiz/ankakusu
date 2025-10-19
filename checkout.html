@@ -309,59 +309,76 @@
 			
 				<script>
 					document.addEventListener("DOMContentLoaded", () => {
-						const cart = JSON.parse(localStorage.getItem("cart")) || [];
 						const tableBody = document.querySelector(".site-block-order-table tbody");
-
 						if (!tableBody) return;
 
+						const cart = JSON.parse(localStorage.getItem("cart")) || [];
 						tableBody.innerHTML = "";
 
 						if (cart.length === 0) {
 							tableBody.innerHTML = `
-											<tr>
-												<td colspan="2" class="text-center py-4">Sepetiniz boş.</td>
-											</tr>`;
+				      <tr>
+				        <td colspan="2" class="text-center py-4">Sepetiniz boş.</td>
+				      </tr>`;
 							return;
 						}
 
-						let total = 0;
+						// 1) Varsa main.js'in yazdığı toplamları kullan (senkron olsun)
+						const savedTotals = JSON.parse(localStorage.getItem("cartTotals") || "null");
 
+						// 2) Yedek: burada da hesaplayalım
+						let subtotal = 0;
+						cart.forEach(item => subtotal += (item.price * item.quantity));
+						let shipping = (subtotal >= 750 && subtotal > 0) ? 0 : (subtotal > 0 ? 39.90 : 0);
+						let total = subtotal + shipping;
+
+						// Eğer savedTotals varsa onu baz al
+						if (savedTotals && savedTotals.subtotal) {
+							subtotal = parseFloat(savedTotals.subtotal);
+							shipping = parseFloat(savedTotals.shipping);
+							total = parseFloat(savedTotals.total);
+						}
+
+						// Ürün satırları
 						cart.forEach(item => {
-							const subtotal = item.price * item.quantity;
-							total += subtotal;
-
 							const row = document.createElement("tr");
+							const lineTotal = (item.price * item.quantity).toFixed(2);
 							row.innerHTML = `
-											<td>${item.title} (${item.color}) <strong class="mx-2">x</strong> ${item.quantity}</td>
-											<td>₺${subtotal.toFixed(2)}</td>`;
+				      <td>${item.title} (${item.color}) <strong class="mx-2">x</strong> ${item.quantity}</td>
+				      <td>₺${lineTotal}</td>`;
 							tableBody.appendChild(row);
 						});
 
-						const shipping = total > 0 ? 39.90 : 0;
-						const grandTotal = total + shipping;
-
-						// Ara toplam satırı
+						// Ara toplam
 						const subtotalRow = document.createElement("tr");
 						subtotalRow.innerHTML = `
-										<td class="text-black font-weight-bold"><strong>Ara Toplam</strong></td>
-										<td class="text-black">₺${total.toFixed(2)}</td>`;
+				    <td class="text-black font-weight-bold"><strong>Ara Toplam</strong></td>
+				    <td class="text-black">₺${subtotal.toFixed(2)}</td>`;
 						tableBody.appendChild(subtotalRow);
 
-						// Kargo satırı
+						// Kargo (750+ ise 0)
 						const shippingRow = document.createElement("tr");
 						shippingRow.innerHTML = `
-										<td class="text-black font-weight-bold"><strong>Kargo</strong></td>
-										<td class="text-black">₺${shipping.toFixed(2)}</td>`;
+				    <td class="text-black font-weight-bold"><strong>Kargo</strong></td>
+				    <td class="text-black">₺${shipping.toFixed(2)}</td>`;
 						tableBody.appendChild(shippingRow);
 
-						// Genel toplam satırı
+						// Genel Toplam
 						const totalRow = document.createElement("tr");
 						totalRow.innerHTML = `
-										<td class="text-black font-weight-bold"><strong>Genel Toplam</strong></td>
-										<td class="text-black font-weight-bold"><strong>₺${grandTotal.toFixed(2)}</strong></td>`;
+				    <td class="text-black font-weight-bold"><strong>Genel Toplam</strong></td>
+				    <td class="text-black font-weight-bold"><strong>₺${total.toFixed(2)}</strong></td>`;
 						tableBody.appendChild(totalRow);
 					});
+
+					// Başka sekmede / sayfada sepet değişirse anında güncelle
+					window.addEventListener("storage", (e) => {
+						if (e.key === "cart" || e.key === "cartTotals") {
+							location.reload(); // hızlı çözüm; istersen yeniden render da çağırabilirsin
+						}
+					});
 				</script>
+
 			</div>
 
 		    </div>
