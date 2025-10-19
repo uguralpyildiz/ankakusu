@@ -1,844 +1,1237 @@
-<!DOCTYPE html>
-<html lang="en">
 
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Ankakuşu Gift Shop</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/drift-zoom/drift-basic.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: NiceShop
-  * Template URL: https://bootstrapmade.com/niceshop-bootstrap-ecommerce-template/
-  * Updated: Jul 25 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
-<body class="index-page">
-
-  <header id="header" class="header sticky-top">
-    <!-- Top Bar -->
-    <div class="top-bar py-2">
-      <div class="container-fluid container-xl">
-        <div class="row align-items-center">
-          <div class="col-lg-4 d-none d-lg-flex">
-            <div class="top-bar-item">
-              <i class="bi bi-telephone-fill me-2"></i>
-              <span>Bize Ulaşın </span>
-              <a href="tel:+1234567890">0532 638 35 88</a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-12 text-center">
-            <div class="announcement-slider swiper init-swiper">
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": 1,
-                  "direction": "vertical",
-                  "effect": "slide"
-                }
-              </script>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">🚚 1.000 TL ve üzeri ücretsiz kargo</div>
-                <div class="swiper-slide">💰 15 Gün iade hakkı</div>
-                <div class="swiper-slide">🎁 İlk siparişe özel %15 indirim</div>
-              </div>
-            </div>
-          </div>
-
-          
-        </div>
-      </div>
-    </div>
-
-    <!-- Main Header -->
-    <div class="main-header">
-      <div class="container-fluid container-xl">
-        <div class="d-flex py-3 align-items-center mbfl">
-
-          <!-- Logo -->
-          <a href="index.html" class="logo d-flex align-items-center">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <img src="ankalogo.png" alt="">
-            
-          </a>
-
-        
-
-          <!-- Actions -->
-          <div class="header-actions d-flex align-items-center justify-content-end">
-
-           
-            <nav id="navmenu" class="navmenu">
-              <ul>
-                <li><a href="index.html" class="active">Ana Sayfa</a></li>
-            
-            
-            
-                <!-- Products Mega Menu 1 -->
-                <li class="products-megamenu-1"><a href="urunler.html"><span>Ürünler</span> ></a>
-            
-                  
-            
-                  <!-- Products Mega Menu 1 Desktop View -->
-                  <div class="desktop-megamenu">
-            
-                    <div class="megamenu-tabs">
-                      <ul class="nav nav-tabs" id="productMegaMenuTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link active" id="featured-tab" data-bs-toggle="tab"
-                            data-bs-target="#featured-content-1862" type="button" aria-selected="true" role="tab">Öne
-                            Çıkanlar</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="new-tab" data-bs-toggle="tab" data-bs-target="#new-content-1862"
-                            type="button" aria-selected="false" tabindex="-1" role="tab">Yeni Gelenler</button>
-                        </li>
-                        
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="category-tab" data-bs-toggle="tab" data-bs-target="#category-content-1862"
-                            type="button" aria-selected="false" tabindex="-1" role="tab">Kategoriler</button>
-                        </li>
-                      </ul>
-                    </div>
-            
-                    <!-- Tabs Content -->
-                    <div class="megamenu-content tab-content">
-            
-                      <!-- Featured Tab -->
-                      <div class="tab-pane fade show active" id="featured-content-1862" role="tabpanel"
-                        aria-labelledby="featured-tab">
-                        <div class="product-grid">
-                          <div class="product-card">
-                            <div class="product-image">
-                              <img src="urunler/hediyelikesya/1 (4).jpg"
-                                alt="Kupa Bardak Seti" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                              <h5>Yuvarlak Led Sihirli Ayna Fotoğraf Çerçevesi</h5>
-                              <p class="price">749,99 TL</p>
-                              <a href="yuvarlak-led-sihirli-ayna.html" class="btn-view">Ürünü İncele</a>
-                            </div>
-                          </div>
-                          <div class="product-card">
-                            <div class="product-image">
-                              <img src="urunler/hediyelikesya/sok-tak-cerceve/1 (1).jpg"
-                                alt="Kupa Bardak Seti" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                              <h5>Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket</h5>
-                              <p class="price">449,99 TL</p>
-                              <a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="btn-view">Ürünü İncele</a>
-                            </div>
-                          </div>
-                          
-                        </div>
-                      </div>
-            
-                      <!-- New Arrivals Tab -->
-                      <div class="tab-pane fade" id="new-content-1862" role="tabpanel" aria-labelledby="new-tab">
-                        <div class="product-grid">
-                          <div class="product-card">
-                            <div class="product-image">
-                              <img src="urunler/hediyelikesya/1 (4).jpg" alt="Kupa Bardak Seti" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                              <h5>Yuvarlak Led Sihirli Ayna Fotoğraf Çerçevesi</h5>
-                              <p class="price">749,99 TL</p>
-                              <a href="yuvarlak-led-sihirli-ayna.html" class="btn-view">Ürünü İncele</a>
-                            </div>
-                          </div>
-                          <div class="product-card">
-                            <div class="product-image">
-                              <img src="urunler/hediyelikesya/sok-tak-cerceve/1 (1).jpg" alt="Kupa Bardak Seti" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                              <h5>Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket</h5>
-                              <p class="price">449,99 TL</p>
-                              <a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="btn-view">Ürünü İncele</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-            
-                    
-            
-                      <!-- Categories Tab -->
-                      <div class="tab-pane fade" id="category-content-1862" role="tabpanel" aria-labelledby="category-tab">
-                        <div class="category-grid">
-                          <div class="category-column">
-                            <h4>Hediyelik Eşyalar</h4>
-                            <ul>
-                              <li><a href="yuvarlak-led-sihirli-ayna.html">Yuvarlak Led Sihirli Ayna Fotoğraf Çerçevesi</a></li>
-                              <li><a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket</a></li>
-                              
-            
-                            </ul>
-                          </div>
-                          <div class="category-column">
-                            <h4>Gece Lambası</h4>
-                            <ul>
-                              Ürün Yok
-                            </ul>
-                          </div>
-                          <div class="category-column">
-                            <h4>Özel Baskı Kupa</h4>
-                            <ul>
-                              Ürün Yok
-                            </ul>
-                          </div>
-                          <div class="category-column">
-                            <h4>Özel Koleksiyonlar</h4>
-                            <ul>
-                            Ürün Yok
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-            
-                    </div>
-            
-                  </div><!-- End Products Mega Menu 1 Desktop View -->
-            
-                </li><!-- End Products Mega Menu 1 -->
-                <!-- Products Mega Menu 2 -->
-            
-                <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                <li><a href="sikca-sorulan-sorular.html">Sıkça Sorulan Sorular</a></li>
-            
-                <li><a href="iletisim.html">İletişim</a></li>
-            
-              </ul>
-            </nav>
-
-          
-
-           
-
-            <!-- Mobile Navigation Toggle -->
-            <i style="color: #059669;" class="mobile-nav-toggle d-xl-none bi bi-list me-0">
-              
-            </i>
-
-          </div>
-
-          <a >Destek</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Navigation -->
-    <div class="header-nav">
-      <div class="container-fluid container-xl position-relative">
-        
-      </div>
-    </div>
-
-   
-
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
-
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="hero-container">
-                <div class="hero-content">
-                  <div class="content-wrapper" data-aos="fade-up" data-aos-delay="100">
-                    <h1 class="hero-title">Hikayeni Hediyeye Dönüştür!</h1>
-                    <p class="hero-description">
-                      Kişiye özel kupalar, gece lambaları ve daha fazlasıyla sevdiklerine unutulmaz bir hediye ver.
-                    </p>
-                    <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
-                      <a href="urunler.html" class="btn-primary">Ürünleri Keşfet</a>
-              
-                    </div>
-                    <div class="features-list" data-aos="fade-up" data-aos-delay="300">
-                      <div class="feature-item">
-                        <i class="bi bi-truck"></i>
-                        <span>Ücretsiz Kargo</span>
-                      </div>
-                      <div class="feature-item">
-                        <i class="bi bi-award"></i>
-                        <span>Kalite Garantisi</span>
-                      </div>
-                      <div class="feature-item">
-                        <i class="bi bi-headset"></i>
-                        <span>7/24 Destek</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="hero-visuals">
-                  <div class="product-showcase" data-aos="fade-left" data-aos-delay="200">
-                    <div class="product-card featured">
-                      <img src="urunler/hediyelikesya/1 (2).jpg" alt="Featured Product" class="img-fluid">
-                      <div class="product-badge">Yeni</div>
-                      <div class="product-info">
-                        <h4>Yuvarlak Led Sihirli Ayna Fotoğraf Çerçevesi</h4>
-                        <div class="price">
-                          <span class="sale-price">149,99 TL</span>
-                          <span class="original-price">249,99 TL</span>
-                        </div>
-                      </div>
-                    </div>
-              
-                    <div class="product-grid">
-                      <div class="product-mini" data-aos="zoom-in" data-aos-delay="400">
-                        <img src="urunler/hediyelikesya/1 (1).jpg" alt="Product" class="img-fluid">
-                        <span class="mini-price">139,99 TL</span>
-                      </div>
-                      <div class="product-mini" data-aos="zoom-in" data-aos-delay="500">
-                        <img src="urunler/hediyelikesya/1 (3).jpg" alt="Product" class="img-fluid">
-                        <span class="mini-price">129,99 TL</span>
-                      </div>
-                    </div>
-                  </div>
-              
-                  <div class="floating-elements">
-                    <div class="floating-icon cart" data-aos="fade-up" data-aos-delay="600">
-                      <img width="25" height="25" src="https://img.icons8.com/fluency-systems-filled/355838/50/cup.png" alt="cup" />
-              
-                    </div>
-                    <div class="floating-icon wishlist" data-aos="fade-up" data-aos-delay="700">
-                      <img width="25" height="25" src="https://img.icons8.com/ios-filled/355838/50/lamp.png" alt="lamp" />
-                    </div>
-                    <div class="floating-icon search" data-aos="fade-up" data-aos-delay="800">
-                      <img width="25" height="25" src="https://img.icons8.com/ios-filled/355838/50/gift--v1.png" alt="gift--v1" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="hero-container">
-                <div class="hero-content">
-                  <div class="content-wrapper" data-aos="fade-up" data-aos-delay="100">
-                    <h1 class="hero-title">Hikayeni Hediyeye Dönüştür!</h1>
-                    <p class="hero-description">
-                      Kişiye özel kupalar, gece lambaları ve daha fazlasıyla sevdiklerine unutulmaz bir hediye ver.
-                    </p>
-                    <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
-                      <a href="urunler.html" class="btn-primary">Ürünleri Keşfet</a>
-              
-                    </div>
-                    <div class="features-list" data-aos="fade-up" data-aos-delay="300">
-                      <div class="feature-item">
-                        <i class="bi bi-truck"></i>
-                        <span>Ücretsiz Kargo</span>
-                      </div>
-                      <div class="feature-item">
-                        <i class="bi bi-award"></i>
-                        <span>Kalite Garantisi</span>
-                      </div>
-                      <div class="feature-item">
-                        <i class="bi bi-headset"></i>
-                        <span>7/24 Destek</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="hero-visuals">
-                  <div class="product-showcase" data-aos="fade-left" data-aos-delay="200">
-                    <div class="product-card featured">
-                      <img src="urunler/hediyelikesya/1 (2).jpg" alt="Featured Product" class="img-fluid">
-                      <div class="product-badge">Yeni</div>
-                      <div class="product-info">
-                        <h4>Yuvarlak Led Sihirli Ayna Fotoğraf Çerçevesi</h4>
-                        <div class="price">
-                          <span class="sale-price">149,99 TL</span>
-                          <span class="original-price">249,99 TL</span>
-                        </div>
-                      </div>
-                    </div>
-              
-                    <div class="product-grid">
-                      <div class="product-mini" data-aos="zoom-in" data-aos-delay="400">
-                        <img src="urunler/hediyelikesya/1 (1).jpg" alt="Product" class="img-fluid">
-                        <span class="mini-price">139,99 TL</span>
-                      </div>
-                      <div class="product-mini" data-aos="zoom-in" data-aos-delay="500">
-                        <img src="urunler/hediyelikesya/1 (3).jpg" alt="Product" class="img-fluid">
-                        <span class="mini-price">129,99 TL</span>
-                      </div>
-                    </div>
-                  </div>
-              
-                  <div class="floating-elements">
-                    <div class="floating-icon cart" data-aos="fade-up" data-aos-delay="600">
-                      <img width="25" height="25" src="https://img.icons8.com/fluency-systems-filled/355838/50/cup.png" alt="cup" />
-              
-                    </div>
-                    <div class="floating-icon wishlist" data-aos="fade-up" data-aos-delay="700">
-                      <img width="25" height="25" src="https://img.icons8.com/ios-filled/355838/50/lamp.png" alt="lamp" />
-                    </div>
-                    <div class="floating-icon search" data-aos="fade-up" data-aos-delay="800">
-                      <img width="25" height="25" src="https://img.icons8.com/ios-filled/355838/50/gift--v1.png" alt="gift--v1" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="hero-container">
-                <div class="hero-content">
-                  <div class="content-wrapper" data-aos="fade-up" data-aos-delay="100">
-                    <h1 class="hero-title">Hikayeni Hediyeye Dönüştür!</h1>
-                    <p class="hero-description">
-                      Kişiye özel kupalar, gece lambaları ve daha fazlasıyla sevdiklerine unutulmaz bir hediye ver.
-                    </p>
-                    <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
-                      <a href="urunler.html" class="btn-primary">Ürünleri Keşfet</a>
-              
-                    </div>
-                    <div class="features-list" data-aos="fade-up" data-aos-delay="300">
-                      <div class="feature-item">
-                        <i class="bi bi-truck"></i>
-                        <span>Ücretsiz Kargo</span>
-                      </div>
-                      <div class="feature-item">
-                        <i class="bi bi-award"></i>
-                        <span>Kalite Garantisi</span>
-                      </div>
-                      <div class="feature-item">
-                        <i class="bi bi-headset"></i>
-                        <span>7/24 Destek</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="hero-visuals">
-                  <div class="product-showcase" data-aos="fade-left" data-aos-delay="200">
-                    <div class="product-card featured">
-                      <img src="urunler/hediyelikesya/1 (2).jpg" alt="Featured Product" class="img-fluid">
-                      <div class="product-badge">Yeni</div>
-                      <div class="product-info">
-                        <h4>Yuvarlak Led Sihirli Ayna Fotoğraf Çerçevesi</h4>
-                        <div class="price">
-                          <span class="sale-price">149,99 TL</span>
-                          <span class="original-price">249,99 TL</span>
-                        </div>
-                      </div>
-                    </div>
-              
-                    <div class="product-grid">
-                      <div class="product-mini" data-aos="zoom-in" data-aos-delay="400">
-                        <img src="urunler/hediyelikesya/1 (1).jpg" alt="Product" class="img-fluid">
-                        <span class="mini-price">139,99 TL</span>
-                      </div>
-                      <div class="product-mini" data-aos="zoom-in" data-aos-delay="500">
-                        <img src="urunler/hediyelikesya/1 (3).jpg" alt="Product" class="img-fluid">
-                        <span class="mini-price">129,99 TL</span>
-                      </div>
-                    </div>
-                  </div>
-              
-                  <div class="floating-elements">
-                    <div class="floating-icon cart" data-aos="fade-up" data-aos-delay="600">
-                      <img width="25" height="25" src="https://img.icons8.com/fluency-systems-filled/355838/50/cup.png" alt="cup" />
-              
-                    </div>
-                    <div class="floating-icon wishlist" data-aos="fade-up" data-aos-delay="700">
-                      <img width="25" height="25" src="https://img.icons8.com/ios-filled/355838/50/lamp.png" alt="lamp" />
-                    </div>
-                    <div class="floating-icon search" data-aos="fade-up" data-aos-delay="800">
-                      <img width="25" height="25" src="https://img.icons8.com/ios-filled/355838/50/gift--v1.png" alt="gift--v1" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-        
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        
-        <!-- Initialize Swiper -->
-        <script>
-          var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            autoplay: {
-              delay: 3000,
-              disableOnInteraction: false,
-            },
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-          });
-        </script>
-      
-
-    </section><!-- /Hero Section -->
-
-    <!-- Promo Cards Section -->
-    <section id="promo-cards" class="promo-cards section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-
-          <div class="col-lg-6">
-            <div class="category-featured" data-aos="fade-right" data-aos-delay="200">
-              <div class="category-image">
-                <img src="https://nonaluisa.eu/cdn/shop/products/DSC1740-43_1080x.jpg?v=1674500549" alt="Women's Collection" class="img-fluid">
-              </div>
-              <div class="category-content">
-                <span class="category-tag">ANKA KUŞU GIFT SHOP</span>
-                <h2>Kategoriler</h2>
-                <p>Binlerce ürün arasından sana en uygun olanı kolayca bul. İster kendin için özel bir parça seç, ister sevdiklerine
-                anlamlı bir hediye hazırla. Kategoriler arasında gezin, tarzını yansıtan tasarımları keşfet ve hikayeni hediyeye
-                dönüştür.</p>
-                <a href="urunler.html" class="btn-shop">Ürünleri İncele <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="row gy-4">
-
-              <div class="col-xl-6">
-                <div class="category-card cat-men" data-aos="fade-up" data-aos-delay="300">
-                  <div class="category-image">
-                    <img src="https://www.greetingsworld.com/wp-content/uploads/2018/09/Happy-New-Year-Mug.jpg" alt="Men's Fashion" class="img-fluid">
-                  </div>
-                  <div class="category-content">
-                    <h4>Kişiye Özel Baskı Ürünler</h4>
-                    <p>0 Ürün </p>
-                    <a href="urunler.html" class="card-link">İncele<i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-xl-6">
-                <div class="category-card cat-kids" data-aos="fade-up" data-aos-delay="400">
-                  <div class="category-image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_zIHlT3guoqCCGfOJBlrNv2mTAhLoMDORoQ&s" alt="Kid's Fashion" class="img-fluid">
-                  </div>
-                  <div class="category-content">
-                    <h4>3D Baskı Ürünler</h4>
-                    <p>0 Ürün</p>
-                    <a href="urunler.html" class="card-link">İncele <i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-xl-6">
-                <div class="category-card cat-cosmetics" data-aos="fade-up" data-aos-delay="500">
-                  <div class="category-image">
-                    <img src="urunler/hediyelikesya/sok-tak-cerceve/1 (1).jpg" alt="Cosmetics" class="img-fluid">
-                  </div>
-                  <div class="category-content">
-                    <h4>Hediyelik Ürünler</h4>
-                    <p>2 Ürün</p>
-                    <a href="urunler.html" class="card-link">İncele <i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-xl-6">
-                <div class="category-card cat-accessories" data-aos="fade-up" data-aos-delay="600">
-                  <div class="category-image">
-                    <img src="https://www.ipekala.com/upload/hediyelik-mika-sekerlik-mum-20-adet.jpg" alt="Accessories" class="img-fluid">
-                  </div>
-                  <div class="category-content">
-                    <h4>Mum Ürünler</h4>
-                    <p>0 Ürün</p>
-                    <a href="urunler.html" class="card-link">İncele <i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- /Promo Cards Section -->
-
-    <!-- Best Sellers Section -->
-    <section id="best-sellers" class="best-sellers section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>En Son Eklenen Ürünler</h2>
-        <p>Binlerce kişinin favorisi haline gelen en popüler ürünler.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-5">
-
-         
-          <!-- Product 1 -->
-         
-          <a href="yuvarlak-led-sihirli-ayna.html" class="col-lg-3 col-md-6">
-            <div class="product-item" style="box-shadow: 0 0 15px #00000010; border: 1px solid #00000020; border-radius: 4px ;">
-              <div class="product-image">
-              
-                <img src="urunler/hediyelikesya/1 (4).jpg" alt="Product Image" class="img-fluid" loading="lazy">
-                <div class="product-actions">
-          
-                 
-                  
-                </div>
-                
-              </div>
-              <div class="product-info" >
-                <div class="product-category">Sana Özel</div>
-                <h4 class="product-name">Yuvarlak Led Sihirli Ayna Fotoğraf Çerçevesi</h4>
-                <div class="product-rating">
-                  <div class="stars">
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
-                  </div>
-                  <span class="rating-count">(0)</span>
-                </div>
-                <div class="product-price">749,99 TL</div>
-                
-              </div>
-            </div>
-          </a>
-          <!-- End Product 1 -->
-
-
-          
-          <!-- Product 1 -->
-         
-          <a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="col-lg-3 col-md-6">
-            <div class="product-item" style="box-shadow: 0 0 15px #00000010; border: 1px solid #00000020; border-radius: 4px ;">
-              <div class="product-image">
-              
-                <img src="urunler/hediyelikesya/sok-tak-cerceve/1 (1).jpg" alt="Product Image" class="img-fluid" loading="lazy">
-                <div class="product-actions">
-          
-                 
-                  
-                </div>
-                
-              </div>
-              <div class="product-info" >
-                <div class="product-category">Sana Özel</div>
-                <h4 class="product-name">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket</h4>
-                <div class="product-rating">
-                  <div class="stars">
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
-                  </div>
-                  <span class="rating-count">(0)</span>
-                </div>
-                <div class="product-price">449,99 TL</div>
-                
-              </div>
-            </div>
-          </a>
-          <!-- End Product 1 -->
-         
-
-         
-
-        </div>
-
-      </div>
-
-    </section><!-- /Best Sellers Section -->
-
-   
-   
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-    <div class="footer-main">
-      <div class="container">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-  
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-widget footer-about">
-              <a href="index.html" class="logo">
-                <img style="max-width: 300px;" src="ankalogo.png" alt="">
-  
-              </a>
-              <p>
-                Anka Kuşu Gift Shop, 7 Temmuz 2025 tarihinde hediyelik eşya sektöründe yenilikçi ve kişiye özel ürünler
-                sunma hedefiyle
-                kurulmuştur. İsmini aldığı Anka Kuşu, yeniden doğuşu, özgünlüğü ve sürekliliği simgelemektedir.
-  
-                Markamız; kupa bardak, tişört, matara, mouse pad, buzdolabı magneti, taş baskılar, 3D yazıcı teknolojisi
-                ile üretilmiş
-                tasarımlar, el yapımı dekoratif mumlar, ev dekorasyon ürünleri ve hediyelik eşyalar gibi geniş bir ürün
-                yelpazesiyle
-                hizmet vermektedir.
-  
-                Her ürün, sadece bir eşya değil; anlamı, hatırası ve özel hikâyesiyle değer katmayı amaçlamaktadır.
-              </p>
-              <div class="social-links mt-4">
-                <h5>Bizi Takip Edin!</h5>
-                <div class="social-icons">
-                  <a href="https://www.facebook.com/ankakusugiftshop" aria-label="Facebook"><img width="48" height="48"
-                      src="https://img.icons8.com/fluency/48/facebook-new.png" alt="facebook-new" /></a>
-                  <a href="https://www.instagram.com/ankakusu_gift_shop" aria-label="Instagram"><img width="48"
-                      height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a>
-  
-                </div>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col-lg-2 col-md-6 col-sm-6">
-            <div class="footer-widget">
-              <h4>Kategoriler</h4>
-              <ul class="footer-links">
-                <li><a href="urunler.html">KİŞİYE ÖZEL BASKI ÜRÜNLER</a></li>
-                <li><a href="urunler.html">3D BASKI ÜRÜNLER</a></li>
-                <li><a href="urunler.html">HEDİYELİK ÜRÜNLER</a></li>
-                <li><a href="urunler.html">MUM ÜRÜNLER</a></li>
-  
-              </ul>
-            </div>
-          </div>
-  
-          <div class="col-lg-2 col-md-6 col-sm-6">
-            <div class="footer-widget">
-              <h4>Destek</h4>
-              <ul class="footer-links">
-  
-  
-  
-                <li><a href="iade-ve-degisim-kargo.html">İade ve Değişim / Kargo Bilgisi</a></li>
-                <li><a href="sikca-sorulan-sorular.html">Sıkça Sorulan Sorular</a></li>
-                <li><a href="iletisim.html">İletişim</a></li>
-              </ul>
-            </div>
-          </div>
-  
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-widget">
-              <h4>İletişim Bilgileri</h4>
-              <div class="footer-contact">
-  
-                <div class="contact-item">
-                  <i class="bi bi-telephone"></i>
-                  <span>0532 638 35 88</span>
-                </div>
-                <div class="contact-item">
-                  <i class="bi bi-globe"></i>
-                  <span>ÖMERAĞA MAH.FETHİYE CAD.KARAGÖZ İŞ HANI.KAT:1 NO:64 KOCAELİ / İZMİT</span>
-                </div>
-                <div class="contact-item">
-                  <i class="bi bi-envelope"></i>
-                  <span>ankakusu.gift.shop@gmail.com</span>
-                </div>
-  
-              </div>
-  
-  
-            </div>
-          </div>
-        </div>
-        <div class="paranoma">
-          <img style="max-width: 200px;" src="visa.png" alt="">
-          <img style="max-width: 100px;" src="ssl.png" alt="">
-        </div>
-        <p style="text-align: center; ">
-          Bu web sitesi 256bit SSL Sertifikası ile saldırılara karşı korunmaktadır.
-        </p>
-      </div>
-    </div>
-  
-    <div class="footer-bottom">
-      <div class="container">
-        <div class="row gy-3 align-items-center">
-          <div class="col-lg-6 col-md-12">
-            <div class="copyright">
-              <p>© <span>Copyright</span> <strong class="sitename">ankakusugiftshop.com</strong>. All Rights Reserved.</p>
-            </div>
-  
-          </div>
-  
-          <div class="col-lg-6 col-md-12">
-            <div class="d-flex flex-wrap justify-content-lg-end justify-content-center align-items-center gap-4">
-  
-  
-              <div class="legal-links">
-                <a href="gizlilik-politikasi.html">KVKK</a>
-                <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
-  
-              </div>
-            </div>
-          </div>
-        </div>
-  
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a  href="https://wa.me/905326383588"  class="scroll-top d-flex align-items-center justify-content-center">
-    <img width="36" height="36" src="https://img.icons8.com/color/124/whatsapp--v1.png" alt="whatsapp--v1">
-    <span class="notification-dot">Çevrimiçi</span>
-  </a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/drift-zoom/Drift.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <link rel="shortcut icon" href="logo.png">
 
   
-</body>
+  <meta name="description" content="İbrahim Çarkcı — deneyimli balıkçı ve çaparici. Taze deniz ürünleri, tekneyle avcılık, sipariş ve nakliye. Karadeniz, Marmara & Ege kıyılarında profesyonel hizmet." />
+<meta name="keywords" content="balıkçı, çaparici, deniz ürünleri, taze balık, tekne avcılığı, İbrahim Çarkcı, balık siparişi, deniz nakliyesi, Marmara balıkçılığı, Ege balıkçılığı" />
+<meta name="author" content="İbrahim Çarkcı" />
+
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="css/tiny-slider.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<title>Anka Kuşu Gift Shop </title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	</head>
+
+	<body>
+		<div class="nevbar">
+			<div class="container">
+				<div class="co-ntack mobile-secs12">
+					<a href="tel:905326383588"><span class="fa fa-solid fa-phone"></span>0 (532) 638 35 88</a>
+				</div>
+				<div class="co-ntack">
+					<a href=""><span class="fa fa-solid fa-truck"></span>1.250 TL ve Üzeri Ücretsiz Kargo</a>
+				</div>
+				<ul class="list-unstyled custom-social">
+					<li><a href="https://www.facebook.com/ankakusugiftshop" target="_blank"><span
+								class="fa fa-brands fa-facebook-f"></span></a></li>|
+		
+					<li><a href="https://www.instagram.com/ankakusu_gift_shop" target="_blank"><span
+								class="fa fa-brands fa-instagram"></span></a></li>
+		
+		
+				</ul>
+			</div>
+		</div>
+		
+		<!-- Start Header/Navigation -->
+		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+		
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img style="max-width: 170px;" src="logo.png" alt="logo">
+		
+				</a>
+		
+		
+		
+				<div class="collapse navbar-collapse" id="navbarsFurni">
+					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.html">Keşfet</a>
+						</li>
+						<li class="kategoriler">
+							<a class="nav-link kategorilerbtn">Kategoriler</a>
+							<div class="kategoriler-list">
+								<div class="kategory-drop">
+									<div class="container" style="max-width: 1050px;">
+										<div class="row g-4">
+											<!-- 1. ürün -->
+											<a style="padding: 15px;" href="kisiye-ozel-baski-urunler.html" class="col-md-3">
+												<div class="card">
+													<img style="width: 100%; height: 150px; object-fit: cover;"
+														src="https://fikircan.com/tema/genel/uploads/hizmetler/photo-gifts.jpg"
+														class="card-img-top" alt="Ürün 1">
+													<div class="card-body">
+														<h5 class="card-title">Kişiye Özel Baskı Ürünler</h5>
+		
+														<span class="btn-warnings ">İncele</span>
+													</div>
+												</div>
+											</a>
+											<a style="padding: 15px;" href="3d-baski-urunler.html" class="col-md-3">
+												<div class="card">
+													<img style="width: 100%; height: 150px; object-fit: cover;"
+														src="https://www.rhino3dprinter.com/Images/Urun/08022020211358.jpeg"
+														class="card-img-top" alt="Ürün 1">
+													<div class="card-body">
+														<h5 class="card-title">3D Baskı Ürünler</h5>
+		
+														<span class="btn-warnings ">İncele</span>
+													</div>
+												</div>
+											</a>
+											<a style="padding: 15px;" href="hediyelik-urunler.html" class="col-md-3">
+												<div class="card">
+													<img style="width: 100%; height: 150px; object-fit: cover;"
+														src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(1).jpg"
+														class="card-img-top" alt="Ürün 1">
+													<div class="card-body">
+														<h5 class="card-title">Hediyelik Ürünler</h5>
+		
+														<span class="btn-warnings ">İncele</span>
+													</div>
+												</div>
+											</a>
+											<a style="padding: 15px;" href="mum-urunler.html" class="col-md-3">
+												<div class="card">
+													<img style="width: 100%; height: 150px; object-fit: cover;"
+														src="https://www.ipekala.com/upload/hediyelik-mika-sekerlik-mum-20-adet.jpg"
+														class="card-img-top" alt="Ürün 1">
+													<div class="card-body">
+														<h5 class="card-title">Mum Ürünler</h5>
+		
+														<span class="btn-warnings ">İncele</span>
+													</div>
+												</div>
+											</a>
+		
+										</div>
+									</div>
+		
+								</div>
+							</div>
+						</li>
+						<li><a class="nav-link" href="hakkimizda.html">Hakkımızda</a></li>
+						<li><a class="nav-link" href="sikca-sorulan-sorular.html">Sıkça Sorulan Sorular</a></li>
+						<li><a class="nav-link" href="iletisim.html">İletişim</a></li>
+					</ul>
+		
+		
+				</div>
+		
+				<div class="toggler-icon-fl">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+						aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icons">
+							<img width="30" height="30" src="https://img.icons8.com/material-rounded/60/menu--v1.png"
+								alt="menu--v1" />
+						</span>
+					</button>
+					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+		
+						<li><a class="nav-link sepetbo" href="sepetim.html"><img width="30" height="30"
+									src="https://img.icons8.com/parakeet-line/48/shopping-cart.png" alt="shopping-cart"><span
+									class="sepetbob">0</span></a></li>
+					</ul>
+				</div>
+			</div>
+		
+		</nav>
+
+		
+		
+		<!-- Demo styles -->
+		<style>
+			
+		
+			.swiper {
+				width: 100%;
+				height: 70vh;
+			}
+		
+			.swiper-slide {
+				background-position: center;
+				background-size: cover;
+				height: 100%;
+			}
+		
+			.swiper-slide img {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+		
+		<!-- End Header/Navigation -->
+
+		<!-- Swiper -->
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				
+			
+				<div class="swiper-slide">
+					<div class="hero position-relative" style="background: url(https://images.unsplash.com/photo-1517874045092-09f497a82704?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470); background-repeat: no-repeat; background-size: cover; background-position: top; height: 100%;">
+					
+						
+					
+						
+					
+						<!-- Content -->
+						<div class="container position-relative z-2">
+							<div class="row justify-content-between">
+								<div class="col-lg-8">
+									<div class="intro-excerpt">
+									<h1>Ruhu Isıtan Işık, <span class="d-block">Evinizi Saran Sıcaklık</span></h1>
+									
+										<div class="cart-section-blabla">
+										
+											<span class="product-price btn-ws addcart catalog2">Ürünü İncele</span>
+											<span class="product-price addcart btn-w catalog2">Hemen Satın Al</span>
+										</div>
+									</div>
+								</div>
+					
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="hero position-relative" style="background: url(https://images.unsplash.com/photo-1544377208-215a63786183?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1576); background-repeat: no-repeat; background-size: cover; background-position: bottom right; height: 100%;">
+					
+						
+					
+						
+					
+						<!-- Content -->
+						<div class="container position-relative z-2">
+							<div class="row justify-content-between">
+								<div class="col-lg-8">
+									<div class="intro-excerpt">
+									<h1>Hayaliniz 3 Boyutta, <span class="d-block">Gerçekleşen Tasarımlar</span></h1>
+
+									
+										<div class="cart-section-blabla">
+										
+											<span class="product-price addcart btn-ws catalog2">Ürünü İncele</span>
+											<span class="product-price addcart btn-w catalog2">Hemen Satın Al</span>
+										</div>
+									</div>
+								</div>
+					
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="hero position-relative" style="background: url(https://images.unsplash.com/photo-1575833949203-ade5a03eb82c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100%;">
+					
+						
+					
+						
+					
+						<!-- Content -->
+						<div class="container position-relative z-2">
+							<div class="row justify-content-between">
+								<div class="col-lg-8">
+									<div class="intro-excerpt">
+									<h1>Sadece Size Özel, <span class="d-block">Anılarla Dolu Hediyeler</span></h1>
+
+									
+										<div class="cart-section-blabla" >
+											
+											<span class="product-price addcart btn-ws catalog2">Ürünü İncele</span>
+											<span class="product-price addcart btn-w catalog2">Hemen Satın Al</span>
+										</div>
+									</div>
+								</div>
+					
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="swiper-pagination"></div>
+		</div>
+		
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+			
+				effect: "jump",
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				autoplay: {
+					delay: 2500, // 3 saniyede bir değiştir
+					disableOnInteraction: false // kullanıcı kaydırsa bile devam et
+				},
+				loop: true // sonsuz döngü
+			});
+		</script>
+		<!-- Start Hero Section -->
+			<!-- HERO SECTION -->
+			
+		<div class="container">
+			<h1 style="color: #111; margin-top: 60px;">Kategoriler</h1>
+			<div class="row g-4">
+				<!-- 1. ürün -->
+				<a style="padding: 15px; text-decoration: none;" href="kisiye-ozel-baski-urunler.html" class="col-md-3">
+					<div class="card">
+						<img style="width: 100%; height: 150px; object-fit: cover;"
+							src="https://fikircan.com/tema/genel/uploads/hizmetler/photo-gifts.jpg" class="card-img-top"
+							alt="Ürün 1">
+						<div class="card-body">
+							<h5 class="card-title">Kişiye Özel Baskı Ürünler</h5>
+		
+							<span class="btn-warnings ">İncele</span>
+						</div>
+					</div>
+				</a>
+				<a style="padding: 15px; text-decoration: none;" href="3d-baski-urunler.html" class="col-md-3">
+					<div class="card">
+						<img style="width: 100%; height: 150px; object-fit: cover;"
+							src="https://www.rhino3dprinter.com/Images/Urun/08022020211358.jpeg" class="card-img-top"
+							alt="Ürün 1">
+						<div class="card-body">
+							<h5 class="card-title">3D Baskı Ürünler</h5>
+		
+							<span class="btn-warnings ">İncele</span>
+						</div>
+					</div>
+				</a>
+				<a style="padding: 15px; text-decoration: none;" href="hediyelik-urunler.html" class="col-md-3">
+					<div class="card">
+						<img style="width: 100%; height: 150px; object-fit: cover;"
+							src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(1).jpg"
+							class="card-img-top" alt="Ürün 1">
+						<div class="card-body">
+							<h5 class="card-title">Hediyelik Ürünler</h5>
+		
+							<span class="btn-warnings ">İncele</span>
+						</div>
+					</div>
+				</a>
+				<a style="padding: 15px; text-decoration: none;" href="mum-urunler.html" class="col-md-3">
+					<div class="card">
+						<img style="width: 100%; height: 150px; object-fit: cover;"
+							src="https://www.ipekala.com/upload/hediyelik-mika-sekerlik-mum-20-adet.jpg" class="card-img-top"
+							alt="Ürün 1">
+						<div class="card-body">
+							<h5 class="card-title">Mum Ürünler</h5>
+		
+							<span class="btn-warnings ">İncele</span>
+						</div>
+					</div>
+				</a>
+		
+			</div>
+		</div>
+		
+		<div class="untree_co-section product-section before-footer-section">
+			<div class="container category-32KK">
+				<h1 class="c-title"><span> Öne Çıkanlar</span> </h1>
+				<div class="row">
+		
+		
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yuvarlak-led-sihirli-ayna.html" class="product-item ">
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/1%20(4).jpg"
+									class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								(0)
+							</div>
+							<h3 class="product-title">Yuvarlak Led Sihirli Ayna Fotoğraf Çerçevesi </h3>
+		
+		
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+		
+		
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item ">
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(1).jpg"
+									class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+		
+							</p>
+		
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+		
+		
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item ">
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(2).jpg"
+									class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+		
+							</p>
+		
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+		
+		
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item ">
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(3).jpg"
+									class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+		
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+		
+		
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item ">
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(3).jpg"
+									class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+		
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+		
+		
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item ">
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(3).jpg"
+									class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+		
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+		
+		
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item ">
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(3).jpg"
+									class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+		
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+		
+		
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item ">
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(3).jpg"
+									class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png"
+									alt="star--v1" />
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+		
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+		
+		
+						</a>
+					</div>
+					<!-- End Column 1 -->
+		
+		
+		
+				</div>
+			</div>
+		
+		</div>
+		<!-- End Hero Section -->
+
+		<div class="untree_co-section product-section before-footer-section">
+			<div class="container category-32KK">	
+				<h1 class="c-title"><span> Kişiye Özel Baskı Ürünler</span> <a href="kisiye-ozel-baski-urunler.html">Tümünü Gör <img width="30" height="30" src="https://img.icons8.com/ios/223a58/50/right--v1.png" alt="right--v1"/></a></h1>
+				<div class="row">
+					
+
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yuvarlak-led-sihirli-ayna.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/1%20(4).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yuvarlak Led Sihirli Ayna Fotoğraf Çerçevesi </h3>
+							
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(1).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+							
+</p>
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(2).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+							
+</p>
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(3).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+				
+		
+		
+				</div>
+			</div>
+			
+		</div>
+		<div class="untree_co-section product-section before-footer-section">
+			<div class="container category-32KK">	
+				<h1 class="c-title"><span> 3D Baskı Ürünler</span> <a href="3d-baski-urunler.html">Tümünü Gör <img width="30" height="30" src="https://img.icons8.com/ios/223a58/50/right--v1.png" alt="right--v1"/></a></h1>
+				<div class="row">
+					
+
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yuvarlak-led-sihirli-ayna.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/1%20(4).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yuvarlak Led Sihirli Ayna Fotoğraf Çerçevesi </h3>
+							
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(1).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+							
+</p>
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(2).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+							
+</p>
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(3).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+				
+		
+		
+				</div>
+			</div>
+			
+		</div>
+		<div class="untree_co-section product-section before-footer-section">
+			<div class="container category-32KK">	
+				<h1 class="c-title"><span> Hediyelik Ürünler</span> <a href="hediyelik-urunler.html">Tümünü Gör <img width="30" height="30" src="https://img.icons8.com/ios/223a58/50/right--v1.png" alt="right--v1"/></a></h1>
+				<div class="row">
+					
+
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yuvarlak-led-sihirli-ayna.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/1%20(4).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yuvarlak Led Sihirli Ayna Fotoğraf Çerçevesi </h3>
+							
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(1).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+							
+</p>
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(2).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+							
+</p>
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(3).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+				
+		
+		
+				</div>
+			</div>
+			
+		</div>
+		<div class="untree_co-section product-section before-footer-section">
+			<div class="container category-32KK">	
+				<h1 class="c-title"><span> Mum Ürünler</span> <a href="mum-urunler.html">Tümünü Gör <img width="30" height="30" src="https://img.icons8.com/ios/223a58/50/right--v1.png" alt="right--v1"/></a></h1>
+				<div class="row">
+					
+
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yuvarlak-led-sihirli-ayna.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/1%20(4).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yuvarlak Led Sihirli Ayna Fotoğraf Çerçevesi </h3>
+							
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(1).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+							
+</p>
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(2).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+							
+</p>
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 ">
+						<a href="yapiskanli-sok-tak-yavrulu-paspartulu-cerceve.html" class="product-item " >
+							<div class="catalog">
+								<img src="https://ankakusugiftshop.com/urunler/hediyelikesya/sok-tak-cerceve/1%20(3).jpg" class="img-fluid product-thumbnail " style="border-radius: 5px;">
+							</div>
+							<div class="star-area">
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								<img width="15" height="15" src="https://img.icons8.com//ios/ff8800/50/star--v1.png" alt="star--v1"/>
+								(0)
+							</div>
+							<h3 class="product-title">Yapışkanlı Sök Tak Yavrulu Paspartulu Çerçeve - 3'lü Paket </h3>
+							
+							<div class="cart-section-blabla" style="flex-direction: column;">
+								<span class="product-price">59.90 TL</span>
+								<span class="product-price addcart catalog2">Ürünü İncele</span>
+							</div>
+								
+							
+						</a>
+					</div>
+					<!-- End Column 1 -->
+				
+		
+		
+				</div>
+			</div>
+			
+		</div>
+		
+	
+		
+
+
+
+
+
+
+
+
+		<!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
+		
+				<div class="wp-ab2">
+					<a href="https://api.whatsapp.com/send/?phone=905326383588&amp;text&amp;type=phone_number&amp;app_absent=0"
+						target="_blank">
+						<img width="30" height="30" src="https://img.icons8.com/color/424/whatsapp--v1.png" alt="whatsapp--v1">
+					</a>
+				</div>
+				<div class="wp-ab1">
+					<a href="tel:905326383588" target="_blank">
+						<img width="30" height="30" src="https://img.icons8.com/ios-glyphs/ffffff/100/phone--v1.png"
+							alt="whatsapp--v1">
+					</a>
+				</div>
+		
+				<div class="ftc">
+					<img style="max-width: 650px; width: 100%;" src="sw.png" alt="">
+					<div>Sitemiz <u><strong>256Bit SSL Sertifikası</strong></u> ile korunmaktadır.</div>
+				</div>
+				<div class="row gy-5 mb-5 mt-3">
+		
+					<!-- Hakkımızda -->
+					<div class="col-12 col-md-6 col-lg-3">
+						<h6 class="fw-bold mb-3">BİZE ULAŞIN</h6>
+						<p style="color: #fff;" class="small mb-2">
+							<i class="bi bi-geo-alt"></i>
+							ÖMERAĞA MAH.FETHİYE CAD.KARAGÖZ İŞ HANI.KAT:1 NO:64 KOCAELİ / İZMİT
+						</p>
+						<p style="color: #fff;" class="small mb-1">
+							<i class="bi bi-telephone"></i> 0532 638 35 88
+						</p>
+						<p style="color: #fff;" class="small mb-3">
+							<i class="bi bi-envelope"></i> ankakusu.gift.shop@gmail.com
+						</p>
+						<h6 class="fw-bold mb-3">BİZİ TAKİP EDİN</h6>
+						<ul class="list-unstyled custom-social">
+							<li><a href="https://www.facebook.com/ankakusugiftshop" target="_blank">
+									<img style=" position: relative; top: -1.6px;" width="30" height="30"
+										src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new" />
+								</a></li>
+							
+							<li><a href="https://www.instagram.com/ankakusu_gift_shop" target="_blank">
+									<img style=" position: relative; top: -1.6px;" width="30" height="30"
+										src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" />
+								</a></li>
+		
+		
+						</ul>
+					</div>
+		
+		
+		
+					<!-- Kategoriler -->
+					<div class="col-6 col-md-6 col-lg-3">
+						<h6 class="fw-bold mb-3">KATEGORİLER</h6>
+						<ul class="list-unstyled small">
+							<li><a href="kisiye-ozel-baski-urunler.html" class="footer-link">Kişiye Özel Baskı Ürünler</a></li>
+							<li><a href="3d-baski-urunler.html" class="footer-link">3D Baskı Ürünler</a></li>
+							<li><a href="hediyelik-urunler.html" class="footer-link">Hediyelik Ürünler</a></li>
+							<li><a href="mum-urunler.html" class="footer-link">Mum Ürünler</a></li>
+						</ul>
+					</div>
+		
+					<!-- Destek & İletişim -->
+					<div class="col-12 col-md-6 col-lg-3">
+						<h6 class="fw-bold mb-3">DESTEK & İLETİŞİM</h6>
+						<ul class="list-unstyled small">
+							<li><a href="iade-politikasi.html" class="footer-link">İade ve Değişim / Kargo Bilgisi</a></li>
+							<li><a href="sikca-sorulan-sorular.html" class="footer-link">Sıkça Sorulan Sorular</a></li>
+							<li><a href="iletisim.html" class="footer-link">İletişim</a></li>
+						</ul>
+		
+					</div>
+					<!-- Destek & İletişim -->
+					<div class="col-12 col-md-6 col-lg-3">
+		
+		
+						<h6 class="fw-bold mb-3">BİZDEN HABERDAR OLUN</h6>
+						<form class="mb-2 finpt">
+							<input type="text" class="form-control mb-2" placeholder="İsim Soyisim">
+							<input type="email" class="form-control mb-2" placeholder="Email Adresiniz">
+							<button type="submit" class="btn btn-danger w-100 fw-semibold">KAYIT OL</button>
+						</form>
+						<p style="color: #fff;" class="small mb-0">
+							İlginç Hediyelerin, Özel Günlerin ve Özgün Tasarımlardan haberdar olmak istiyorsan bize katıl.
+						</p>
+		
+					</div>
+		
+				</div>
+		
+				<div class="border-top copyright">
+					<div style="display: flex; align-items: center !important;" class="row pt-4">
+						<div class="col-lg-4">
+							<img style="max-width: 250px;" src="logo.png" alt="">
+						</div>
+						<div class="col-lg-4">
+							ankakusugiftshop.com &copy; 2025 Tüm Hakları Saklıdır
+						</div>
+		
+						<div class="col-lg-4 text-center text-lg-end">
+							<ul class="list-unstyled d-inline-flex ms-auto">
+		
+		
+								<li class="me-4"><a href="gizlilik-politikasi.html">Gizlilik Politikası </a></li>
+								<li><a href="kullanim-kosullari.html"> Kullanım Koşulları</a></li>
+		
+							</ul>
+						</div>
+		
+					</div>
+				</div>
+		
+			</div>
+		</footer>
+		<!-- End Footer Section -->
+
+
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/tiny-slider.js"></script>
+		<script src="js/custom.js"></script>
+	</body>
 
 </html>
