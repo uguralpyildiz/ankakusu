@@ -247,11 +247,44 @@
 			
 								
 			
+								<div class="sozlesme">
+									<input id="sozlesme" type="checkbox">
+									<label for="sozlesme">
+										<a id="sozlesmeLink" style="color: blue;" href="mesafeli-satis-sozlesmesi.html" target="_blank">
+											Mesafeli satış sözleşmesini
+										</a>, okudum ve onaylıyorum.
+									</label>
+								</div>
+								
 								<div class="form-group">
 									<button id="checkoutBtn" class="btn btn-warning btn-lg py-3 btn-block">
 										Ödemeyi Onayla
 									</button>
 								</div>
+								
+								<script>
+									const checkbox = document.getElementById('sozlesme');
+									const button = document.getElementById('checkoutBtn');
+									const sozlesmeLink = document.getElementById('sozlesmeLink');
+
+									button.addEventListener('click', (e) => {
+										if (!checkbox.checked) {
+											e.preventDefault(); // tıklamayı durdur
+											sozlesmeLink.style.color = 'red';
+											sozlesmeLink.style.fontWeight = 'bold';
+
+											// 2 saniye sonra eski haline dönsün
+											setTimeout(() => {
+												sozlesmeLink.style.color = 'blue';
+												sozlesmeLink.style.fontWeight = 'normal';
+											}, 2000);
+										} else {
+											// buraya ödeme işlemi veya yönlendirme kodu gelir
+											console.log("Ödeme onaylandı!");
+										}
+									});
+								</script>
+
 								
 								<script>
 									document.addEventListener("DOMContentLoaded", () => {
@@ -491,7 +524,8 @@
 		
 		
 								<li class="me-4"><a href="gizlilik-politikasi.html">Gizlilik Politikası </a></li>
-								<li><a href="kullanim-kosullari.html"> Kullanım Koşulları</a></li>
+								<li class="me-4"><a href="iade-ve-degisim-politikasi.html"> İade Politikası</a></li>
+								<li><a href="mesafeli-satis-sozlesmesi.html"> Mesafeli Satış Sözleşmesi</a></li>
 		
 							</ul>
 						</div>

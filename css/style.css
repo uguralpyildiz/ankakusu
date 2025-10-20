@@ -260,6 +260,13 @@ tbody tr img {
   height: 150px;
   margin: auto !important;
 }
+.sozlesme{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+  color: #000 !important;
+}
 tbody tr .remove-btn {
 
   padding: 10px 20px !important;
